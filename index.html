@@ -2,108 +2,125 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Deep Isalaniya</title>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" rel="stylesheet" />
   <style>
     body {
       margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background: #fff;
-      color: #333;
-      scroll-behavior: smooth;
+      font-family: 'Fira Code', monospace;
+      background-color: #111;
+      color: #d7f5f5;
+      line-height: 1.7;
+      padding: 2rem;
     }
-    header {
-      background: #f8f8f8;
-      padding: 20px;
-      position: sticky;
-      top: 0;
-      z-index: 10;
-      border-bottom: 1px solid #e0e0e0;
-    }
-    nav {
-      display: flex;
-      justify-content: space-between;
-      max-width: 1000px;
+
+    header, section {
+      max-width: 700px;
       margin: auto;
-      align-items: center;
     }
-    nav a {
-      margin-left: 20px;
+
+    h1 {
+      color: #85e0c5;
+    }
+
+    a {
+      color: #87f9e4;
       text-decoration: none;
-      color: #333;
-      font-weight: 500;
     }
-    section {
-      max-width: 800px;
-      margin: 80px auto;
-      padding: 0 20px;
+
+    a:hover {
+      text-decoration: underline;
     }
-    h1, h2 {
-      font-weight: 600;
+
+    nav {
+      font-size: 0.9rem;
+      margin-bottom: 1.5rem;
     }
-    ul {
-      padding-left: 20px;
+
+    nav a {
+      margin-right: 20px;
+      text-transform: lowercase;
     }
-    .project {
-      margin-bottom: 20px;
+
+    hr {
+      border: none;
+      border-top: 1px dashed #444;
+      margin: 2rem 0;
     }
-    .footer {
+
+    .portfolio-item {
+      border: 1px solid #444;
+      padding: 1rem;
+      margin-bottom: 1rem;
+      border-radius: 5px;
+    }
+
+    .blog-list li {
+      margin-bottom: 10px;
+    }
+
+    footer {
       text-align: center;
-      padding: 40px 20px;
-      color: #999;
-      border-top: 1px solid #eee;
-      margin-top: 80px;
+      font-size: 0.9rem;
+      margin-top: 4rem;
+      color: #777;
     }
   </style>
 </head>
 <body>
 
-<header>
-  <nav>
-    <div><strong>Deep Isalaniya</strong></div>
-    <div>
-      <a href="#about">About</a>
-      <a href="#projects">Projects</a>
-      <a href="#skills">Skills</a>
-      <a href="#contact">Contact</a>
+  <header>
+    <nav>
+      <a href="#about">blog</a>
+      <a href="#projects">portfolio</a>
+      <a href="#">resume</a>
+    </nav>
+
+    <h1>hi! i'm deep isalaniya.</h1>
+    <p>
+      🎓 MSc Data Science student <br>
+      🔍 Curious about AI, smart cities & analytics <br>
+      💡 Data-driven thinker. Web enthusiast. Explorer.
+    </p>
+  </header>
+
+  <hr>
+
+  <section id="projects">
+    <h2>Portfolio</h2>
+
+    <div class="portfolio-item">
+      <strong>Urban City Analysis</strong><br />
+      ML model analyzing traffic, safety, and housing using smart city datasets.
     </div>
-  </nav>
-</header>
 
-<section id="about">
-  <h1>Hi, I'm Deep 👋</h1>
-  <p>I’m a Master’s student in Data Science with a passion for AI, Machine Learning, and Web Development. I'm curious, analytical, and always ready to build something meaningful.</p>
-</section>
+    <div class="portfolio-item">
+      <strong>Heart Disease Prediction</strong><br />
+      Classification project using synthetic health data to detect heart disease.
+    </div>
+  </section>
 
-<section id="projects">
-  <h2>Projects</h2>
-  <div class="project">
-    <strong>🧠 Urban City Analysis</strong><br>
-    A predictive model analyzing traffic, safety, and housing using ML for smart city development.
-  </div>
-</section>
+  <hr>
 
-<section id="skills">
-  <h2>Skills</h2>
-  <ul>
-    <li>Python, SQL</li>
-    <li>Machine Learning, Deep Learning</li>
-    <li>Pandas, NumPy, Scikit-Learn</li>
-    <li>Data Visualization – Matplotlib, Seaborn, Tableau</li>
-    <li>Web Dev – HTML, CSS, Git</li>
-  </ul>
-</section>
+  <section id="blog">
+    <h2>Blog</h2>
+    <ul class="blog-list">
+      <li>🗓️ 2025-06-27 – <a href="#">Understanding Transformer Models</a></li>
+      <li>🗓️ 2025-05-14 – <a href="#">Urban Traffic Prediction with ML</a></li>
+    </ul>
+  </section>
 
-<section id="contact">
-  <h2>Contact</h2>
-  <p>📧 deep2479mission@gmail.com</p>
-  <p>💼 <a href="https://github.com/Deep-ii" target="_blank">GitHub: Deep-ii</a></p>
-  <p>🔗 <a href="https://linkedin.com/in/deepisalaniya" target="_blank">LinkedIn</a></p>
-</section>
+  <hr>
 
-<div class="footer">
-  © 2025 Deep Isalaniya · Built with ❤️
-</div>
+  <footer>
+    <div>
+      <a href="mailto:deep2479@gmail.com">email</a> · 
+      <a href="https://linkedin.com/in/deepisalaniya" target="_blank">linkedin</a> · 
+      <a href="https://github.com/Deep-ii" target="_blank">github</a>
+    </div>
+    <p>© 2025 Deep Isalaniya</p>
+  </footer>
 
 </body>
 </html>
