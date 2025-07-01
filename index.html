@@ -3,75 +3,107 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Deep Isalaniya | Portfolio</title>
+  <title>Deep Isalaniya</title>
   <style>
     body {
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #f5f5f5;
       margin: 0;
-      padding: 0;
-    }
-    .container {
-      max-width: 800px;
-      margin: auto;
-      padding: 2rem;
-      background-color: white;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-      margin-top: 3rem;
-      border-radius: 10px;
-    }
-    h1 {
-      text-align: center;
+      font-family: 'Segoe UI', sans-serif;
+      background: #fff;
       color: #333;
+      scroll-behavior: smooth;
     }
-    h2 {
-      color: #555;
-      border-bottom: 1px solid #ccc;
-      padding-bottom: 5px;
+    header {
+      background: #f8f8f8;
+      padding: 20px;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      border-bottom: 1px solid #e0e0e0;
+    }
+    nav {
+      display: flex;
+      justify-content: space-between;
+      max-width: 1000px;
+      margin: auto;
+      align-items: center;
+    }
+    nav a {
+      margin-left: 20px;
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+    }
+    section {
+      max-width: 800px;
+      margin: 80px auto;
+      padding: 0 20px;
+    }
+    h1, h2 {
+      font-weight: 600;
     }
     ul {
-      list-style: none;
-      padding-left: 0;
+      padding-left: 20px;
     }
-    li {
-      padding: 5px 0;
-    }
-    a {
-      color: #007acc;
-      text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
+    .project {
+      margin-bottom: 20px;
     }
     .footer {
       text-align: center;
-      margin-top: 2rem;
-      font-size: 0.9rem;
-      color: #888;
+      padding: 40px 20px;
+      color: #999;
+      border-top: 1px solid #eee;
+      margin-top: 80px;
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <h1>Deep Isalaniya</h1>
-    <p>🚀 M.Sc. Data Science Student | 💡 AI Explorer | 🌐 Web Developer</p>
 
-    <h2>💼 Projects</h2>
-    <ul>
-      <li><strong>Urban City Analysis</strong> – ML model to analyze traffic, safety, and housing data.</li>
-      <li><strong>Heart Disease Prediction</strong> – Machine learning project using synthetic health data.</li>
-    </ul>
-
-    <h2>📫 Contact</h2>
-    <ul>
-      <li>Email: deep@example.com</li>
-      <li>GitHub: <a href="https://github.com/Deep-ii" target="_blank">github.com/Deep-ii</a></li>
-      <li>LinkedIn: <a href="https://linkedin.com/in/deepisalaniya" target="_blank">linkedin.com/in/deepisalaniya</a></li>
-    </ul>
-
-    <div class="footer">
-      © 2025 Deep Isalaniya
+<header>
+  <nav>
+    <div><strong>Deep Isalaniya</strong></div>
+    <div>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
     </div>
+  </nav>
+</header>
+
+<section id="about">
+  <h1>Hi, I'm Deep 👋</h1>
+  <p>I’m a Master’s student in Data Science with a passion for AI, Machine Learning, and Web Development. I'm curious, analytical, and always ready to build something meaningful.</p>
+</section>
+
+<section id="projects">
+  <h2>Projects</h2>
+  <div class="project">
+    <strong>🧠 Urban City Analysis</strong><br>
+    A predictive model analyzing traffic, safety, and housing using ML for smart city development.
   </div>
+</section>
+
+<section id="skills">
+  <h2>Skills</h2>
+  <ul>
+    <li>Python, SQL</li>
+    <li>Machine Learning, Deep Learning</li>
+    <li>Pandas, NumPy, Scikit-Learn</li>
+    <li>Data Visualization – Matplotlib, Seaborn, Tableau</li>
+    <li>Web Dev – HTML, CSS, Git</li>
+  </ul>
+</section>
+
+<section id="contact">
+  <h2>Contact</h2>
+  <p>📧 deep2479mission@gmail.com</p>
+  <p>💼 <a href="https://github.com/Deep-ii" target="_blank">GitHub: Deep-ii</a></p>
+  <p>🔗 <a href="https://linkedin.com/in/deepisalaniya" target="_blank">LinkedIn</a></p>
+</section>
+
+<div class="footer">
+  © 2025 Deep Isalaniya · Built with ❤️
+</div>
+
 </body>
 </html>
