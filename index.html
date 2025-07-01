@@ -60,6 +60,17 @@
       margin-bottom: 10px;
     }
 
+    .resume-button {
+      display: inline-block;
+      margin-bottom: 1rem;
+      color: #111;
+      background: #87f9e4;
+      padding: 10px 16px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
     footer {
       text-align: center;
       font-size: 0.9rem;
@@ -71,14 +82,15 @@
 <body>
 
   <header>
-    <a href="resume.pdf" target="_blank" style="color: #111; background: #87f9e4; padding: 10px 16px; border-radius: 5px; text-decoration: none; font-weight: bold;">
-  📄 Download Resume
-</a>
+    <!-- Resume button at top -->
+    <a href="resume.pdf" target="_blank" class="resume-button">📄 Download Resume</a>
 
+    <!-- Navigation bar -->
     <nav>
-      <a href="#about">blog</a>
+      <a href="#about">about</a>
+      <a href="#blog">blog</a>
       <a href="#projects">portfolio</a>
-      <a href="#">resume</a>
+      <a href="resume.pdf" target="_blank">resume</a>
     </nav>
 
     <h1>hi! i'm deep isalaniya.</h1>
@@ -88,6 +100,15 @@
       💡 Data-driven thinker. Web enthusiast. Explorer.
     </p>
   </header>
+
+  <hr>
+
+  <section id="about">
+    <h2>About</h2>
+    <p>
+      I'm currently pursuing my Master’s in Data Science. My focus is on real-world applications of AI, including predictive models for urban safety, healthcare, and intelligent systems.
+    </p>
+  </section>
 
   <hr>
 
