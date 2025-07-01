@@ -41,6 +41,14 @@ nav a {
   text-transform: lowercase;
 }
 
+.resume-button {
+  background: #87f9e4;
+  color: #111;
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
 hr {
   border: none;
   border-top: 1px dashed #444;
