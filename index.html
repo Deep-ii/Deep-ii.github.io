@@ -21,9 +21,7 @@
     }
 
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
     html { scroll-behavior: smooth; }
-
     body {
       background: var(--bg);
       color: var(--text);
@@ -54,15 +52,12 @@
       opacity: 0.5;
     }
 
-    /* Noise overlay */
     body::before {
       content: '';
       position: fixed; inset: 0;
       background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
       pointer-events: none; z-index: 1; opacity: 0.4;
     }
-
-    /* Grid background */
     body::after {
       content: '';
       position: fixed; inset: 0;
@@ -89,24 +84,18 @@
     }
     .nav-logo {
       font-family: var(--font-display);
-      font-weight: 800;
-      font-size: 18px;
-      color: var(--accent);
-      letter-spacing: -0.5px;
+      font-weight: 800; font-size: 18px;
+      color: var(--accent); letter-spacing: -0.5px;
       text-decoration: none;
     }
     .nav-links { display: flex; gap: 32px; list-style: none; }
     .nav-links a {
-      color: var(--muted);
-      text-decoration: none;
-      font-size: 12px;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      transition: color 0.2s;
+      color: var(--muted); text-decoration: none;
+      font-size: 12px; letter-spacing: 2px;
+      text-transform: uppercase; transition: color 0.2s;
     }
     .nav-links a:hover { color: var(--accent); }
 
-    /* SECTIONS */
     section { position: relative; z-index: 2; }
 
     /* HERO */
@@ -116,7 +105,6 @@
       padding: 120px 48px 80px;
       position: relative; overflow: hidden;
     }
-
     .hero-glow {
       position: absolute;
       width: 600px; height: 600px;
@@ -131,14 +119,11 @@
       bottom: 10%; left: -50px;
       animation: pulse 8s ease-in-out infinite reverse;
     }
-
     @keyframes pulse {
       0%, 100% { transform: scale(1); opacity: 1; }
       50% { transform: scale(1.1); opacity: 0.7; }
     }
-
     .hero-content { max-width: 800px; }
-
     .hero-tag {
       display: inline-flex; align-items: center; gap: 8px;
       font-size: 11px; letter-spacing: 3px; text-transform: uppercase;
@@ -146,36 +131,25 @@
       opacity: 0; animation: fadeUp 0.6s 0.2s forwards;
     }
     .hero-tag::before {
-      content: '';
-      width: 32px; height: 1px;
-      background: var(--accent);
+      content: ''; width: 32px; height: 1px; background: var(--accent);
     }
-
     .hero-name {
       font-family: var(--font-display);
       font-size: clamp(52px, 8vw, 96px);
-      font-weight: 800;
-      line-height: 0.95;
-      letter-spacing: -3px;
-      margin-bottom: 24px;
+      font-weight: 800; line-height: 0.95;
+      letter-spacing: -3px; margin-bottom: 24px;
       opacity: 0; animation: fadeUp 0.6s 0.4s forwards;
     }
     .hero-name .highlight {
       background: linear-gradient(135deg, var(--accent), var(--accent2));
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
     }
-
     .hero-desc {
-      font-size: 15px;
-      color: var(--muted);
-      line-height: 1.8;
-      max-width: 520px;
+      font-size: 15px; color: var(--muted);
+      line-height: 1.8; max-width: 520px;
       margin-bottom: 40px;
       opacity: 0; animation: fadeUp 0.6s 0.6s forwards;
     }
-
     .hero-stack {
       display: flex; gap: 12px; flex-wrap: wrap;
       margin-bottom: 48px;
@@ -185,23 +159,17 @@
       font-size: 11px; letter-spacing: 1px;
       padding: 6px 14px; border-radius: 4px;
       border: 1px solid var(--border);
-      color: var(--muted);
-      background: var(--surface);
+      color: var(--muted); background: var(--surface);
     }
-
     .hero-cta {
       display: flex; gap: 16px; flex-wrap: wrap;
       opacity: 0; animation: fadeUp 0.6s 0.8s forwards;
     }
     .btn-primary {
-      padding: 14px 28px;
-      background: var(--accent);
-      color: #000;
-      font-family: var(--font-mono);
-      font-size: 12px; font-weight: 500;
-      letter-spacing: 1px;
-      text-decoration: none;
-      border: none; cursor: pointer;
+      padding: 14px 28px; background: var(--accent);
+      color: #000; font-family: var(--font-mono);
+      font-size: 12px; font-weight: 500; letter-spacing: 1px;
+      text-decoration: none; border: none; cursor: pointer;
       transition: transform 0.2s, box-shadow 0.2s;
       clip-path: polygon(0 0, calc(100% - 12px) 0, 100% 12px, 100% 100%, 12px 100%, 0 calc(100% - 12px));
     }
@@ -210,21 +178,13 @@
       box-shadow: 0 8px 32px rgba(0,229,255,0.3);
     }
     .btn-secondary {
-      padding: 14px 28px;
-      background: transparent;
-      color: var(--text);
-      font-family: var(--font-mono);
-      font-size: 12px;
-      letter-spacing: 1px;
-      text-decoration: none;
-      border: 1px solid var(--border);
+      padding: 14px 28px; background: transparent;
+      color: var(--text); font-family: var(--font-mono);
+      font-size: 12px; letter-spacing: 1px;
+      text-decoration: none; border: 1px solid var(--border);
       transition: border-color 0.2s, color 0.2s;
     }
-    .btn-secondary:hover {
-      border-color: var(--accent);
-      color: var(--accent);
-    }
-
+    .btn-secondary:hover { border-color: var(--accent); color: var(--accent); }
     .hero-scroll {
       position: absolute; bottom: 40px; left: 48px;
       display: flex; align-items: center; gap: 12px;
@@ -233,83 +193,54 @@
       opacity: 0; animation: fadeUp 0.6s 1.2s forwards;
     }
     .scroll-line {
-      width: 40px; height: 1px;
-      background: var(--muted);
+      width: 40px; height: 1px; background: var(--muted);
       animation: scrollLine 2s ease-in-out infinite;
     }
     @keyframes scrollLine {
-      0%, 100% { width: 40px; }
-      50% { width: 70px; }
+      0%, 100% { width: 40px; } 50% { width: 70px; }
     }
-
     @keyframes fadeUp {
       from { opacity: 0; transform: translateY(24px); }
       to { opacity: 1; transform: translateY(0); }
     }
 
     /* SECTION COMMON */
-    .section-inner {
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 100px 48px;
-    }
-
+    .section-inner { max-width: 1100px; margin: 0 auto; padding: 100px 48px; }
     .section-label {
       font-size: 10px; letter-spacing: 4px;
-      text-transform: uppercase;
-      color: var(--accent);
+      text-transform: uppercase; color: var(--accent);
       margin-bottom: 16px;
       display: flex; align-items: center; gap: 12px;
     }
     .section-label::after {
-      content: '';
-      flex: 1; max-width: 60px;
+      content: ''; flex: 1; max-width: 60px;
       height: 1px; background: var(--accent);
     }
-
     .section-title {
       font-family: var(--font-display);
       font-size: clamp(32px, 4vw, 48px);
-      font-weight: 800;
-      letter-spacing: -1px;
-      margin-bottom: 64px;
-      line-height: 1.1;
+      font-weight: 800; letter-spacing: -1px;
+      margin-bottom: 64px; line-height: 1.1;
     }
 
     /* ABOUT */
     #about { background: var(--bg2); }
-
     .about-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 80px;
-      align-items: start;
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 80px; align-items: start;
     }
-
-    .about-text {
-      font-size: 14px;
-      color: var(--muted);
-      line-height: 2;
-    }
+    .about-text { font-size: 14px; color: var(--muted); line-height: 2; }
     .about-text p { margin-bottom: 20px; }
     .about-text strong { color: var(--text); }
-
-    .about-stats {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 2px;
-    }
+    .about-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; }
     .stat-box {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      padding: 28px 24px;
-      position: relative; overflow: hidden;
+      background: var(--surface); border: 1px solid var(--border);
+      padding: 28px 24px; position: relative; overflow: hidden;
       transition: border-color 0.3s;
     }
     .stat-box:hover { border-color: var(--accent); }
     .stat-box::before {
-      content: '';
-      position: absolute; top: 0; left: 0;
+      content: ''; position: absolute; top: 0; left: 0;
       width: 100%; height: 2px;
       background: linear-gradient(90deg, var(--accent), transparent);
       opacity: 0; transition: opacity 0.3s;
@@ -318,136 +249,76 @@
     .stat-num {
       font-family: var(--font-display);
       font-size: 40px; font-weight: 800;
-      color: var(--accent);
-      line-height: 1;
-      margin-bottom: 6px;
+      color: var(--accent); line-height: 1; margin-bottom: 6px;
     }
-    .stat-label {
-      font-size: 11px; letter-spacing: 1px;
-      color: var(--muted); text-transform: uppercase;
-    }
+    .stat-label { font-size: 11px; letter-spacing: 1px; color: var(--muted); text-transform: uppercase; }
 
     /* EXPERIENCE */
     #experience { background: var(--bg); }
-
     .exp-list { display: flex; flex-direction: column; gap: 2px; }
-
     .exp-item {
-      background: var(--surface);
-      border: 1px solid var(--border);
+      background: var(--surface); border: 1px solid var(--border);
       padding: 32px 36px;
-      display: grid;
-      grid-template-columns: 1fr auto;
-      gap: 20px;
-      align-items: start;
-      transition: border-color 0.3s, background 0.3s;
-      cursor: default;
+      display: grid; grid-template-columns: 1fr auto;
+      gap: 20px; align-items: start;
+      transition: border-color 0.3s, background 0.3s; cursor: default;
     }
-    .exp-item:hover {
-      border-color: var(--accent);
-      background: rgba(0,229,255,0.02);
-    }
-    .exp-role {
-      font-family: var(--font-display);
-      font-size: 18px; font-weight: 700;
-      margin-bottom: 4px;
-    }
-    .exp-company {
-      font-size: 12px; color: var(--accent);
-      letter-spacing: 1px; margin-bottom: 16px;
-    }
-    .exp-desc {
-      font-size: 13px; color: var(--muted);
-      line-height: 1.8;
-    }
+    .exp-item:hover { border-color: var(--accent); background: rgba(0,229,255,0.02); }
+    .exp-role { font-family: var(--font-display); font-size: 18px; font-weight: 700; margin-bottom: 4px; }
+    .exp-company { font-size: 12px; color: var(--accent); letter-spacing: 1px; margin-bottom: 16px; }
+    .exp-desc { font-size: 13px; color: var(--muted); line-height: 1.8; }
     .exp-desc li { margin-bottom: 6px; padding-left: 16px; position: relative; list-style: none; }
     .exp-desc li::before { content: '→'; position: absolute; left: 0; color: var(--accent3); font-size: 11px; top: 2px; }
     .exp-date {
-      font-size: 11px; color: var(--muted);
-      letter-spacing: 1px; white-space: nowrap;
-      padding: 6px 12px;
-      border: 1px solid var(--border);
-      border-radius: 2px;
+      font-size: 11px; color: var(--muted); letter-spacing: 1px;
+      white-space: nowrap; padding: 6px 12px;
+      border: 1px solid var(--border); border-radius: 2px;
     }
     .exp-tags { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 16px; }
-    .exp-tag {
-      font-size: 10px; padding: 4px 10px;
-      border: 1px solid var(--border);
-      color: var(--muted);
-      border-radius: 2px;
-    }
+    .exp-tag { font-size: 10px; padding: 4px 10px; border: 1px solid var(--border); color: var(--muted); border-radius: 2px; }
 
     /* PROJECTS */
     #projects { background: var(--bg2); }
-
     .projects-grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(480px, 1fr));
       gap: 2px;
     }
-
     .project-card {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      padding: 36px;
-      position: relative; overflow: hidden;
+      background: var(--surface); border: 1px solid var(--border);
+      padding: 36px; position: relative; overflow: hidden;
       transition: border-color 0.3s;
       display: flex; flex-direction: column;
     }
     .project-card:hover { border-color: var(--accent); }
     .project-card.featured {
       grid-column: 1 / -1;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 48px;
+      display: grid; grid-template-columns: 1fr 1fr; gap: 48px;
     }
     .project-card::after {
-      content: '';
-      position: absolute; bottom: 0; left: 0;
+      content: ''; position: absolute; bottom: 0; left: 0;
       width: 100%; height: 2px;
       background: linear-gradient(90deg, var(--accent), var(--accent2));
-      transform: scaleX(0); transform-origin: left;
-      transition: transform 0.4s;
+      transform: scaleX(0); transform-origin: left; transition: transform 0.4s;
     }
     .project-card:hover::after { transform: scaleX(1); }
-
-    .project-num {
-      font-size: 11px; letter-spacing: 2px;
-      color: var(--muted); margin-bottom: 20px;
-    }
-    .project-title {
-      font-family: var(--font-display);
-      font-size: 22px; font-weight: 700;
-      margin-bottom: 8px; line-height: 1.2;
-    }
-    .project-subtitle {
-      font-size: 12px; color: var(--accent);
-      letter-spacing: 1px; margin-bottom: 20px;
-    }
-    .project-desc {
-      font-size: 13px; color: var(--muted);
-      line-height: 1.9; flex: 1;
-    }
-    .project-desc li {
-      margin-bottom: 8px; list-style: none;
-      padding-left: 20px; position: relative;
-    }
-    .project-desc li::before {
-      content: '▸'; position: absolute; left: 0;
-      color: var(--accent3); font-size: 10px; top: 3px;
-    }
+    .project-num { font-size: 11px; letter-spacing: 2px; color: var(--muted); margin-bottom: 20px; }
+    .project-title { font-family: var(--font-display); font-size: 22px; font-weight: 700; margin-bottom: 8px; line-height: 1.2; }
+    .project-subtitle { font-size: 12px; color: var(--accent); letter-spacing: 1px; margin-bottom: 20px; }
+    .project-desc { font-size: 13px; color: var(--muted); line-height: 1.9; flex: 1; }
+    .project-desc li { margin-bottom: 8px; list-style: none; padding-left: 20px; position: relative; }
+    .project-desc li::before { content: '▸'; position: absolute; left: 0; color: var(--accent3); font-size: 10px; top: 3px; }
     .project-footer {
-      margin-top: 28px;
-      display: flex; justify-content: space-between;
-      align-items: center; flex-wrap: wrap; gap: 12px;
+      margin-top: 28px; display: flex;
+      justify-content: space-between; align-items: center;
+      flex-wrap: wrap; gap: 12px;
     }
     .project-stack { display: flex; gap: 8px; flex-wrap: wrap; }
     .project-stack span {
       font-size: 10px; padding: 4px 10px;
       background: rgba(0,229,255,0.06);
       border: 1px solid rgba(0,229,255,0.15);
-      color: var(--accent);
-      border-radius: 2px; letter-spacing: 0.5px;
+      color: var(--accent); border-radius: 2px; letter-spacing: 0.5px;
     }
     .project-link {
       font-size: 11px; letter-spacing: 1px;
@@ -457,86 +328,51 @@
     }
     .project-link:hover { color: var(--accent); }
     .project-link::after { content: '↗'; }
-
     .project-highlight {
-      background: var(--bg);
-      border: 1px solid var(--border);
-      border-radius: 4px;
-      padding: 20px;
-      font-size: 12px;
-      line-height: 1.8;
+      background: var(--bg); border: 1px solid var(--border);
+      border-radius: 4px; padding: 20px;
+      font-size: 12px; line-height: 1.8;
     }
     .project-highlight .hl-title {
       font-size: 10px; letter-spacing: 2px;
-      color: var(--accent); text-transform: uppercase;
-      margin-bottom: 12px;
+      color: var(--accent); text-transform: uppercase; margin-bottom: 12px;
     }
-    .pipeline {
-      display: flex; flex-direction: column; gap: 8px;
-    }
-    .pipeline-step {
-      display: flex; align-items: center; gap: 12px;
-      font-size: 11px; color: var(--muted);
-    }
+    .pipeline { display: flex; flex-direction: column; gap: 8px; }
+    .pipeline-step { display: flex; align-items: center; gap: 12px; font-size: 11px; color: var(--muted); }
     .pipeline-step .dot {
       width: 8px; height: 8px; border-radius: 50%;
       background: var(--accent); flex-shrink: 0;
       box-shadow: 0 0 8px var(--accent);
     }
-    .pipeline-connector {
-      width: 1px; height: 16px;
-      background: var(--border);
-      margin-left: 3px;
-    }
+    .pipeline-connector { width: 1px; height: 16px; background: var(--border); margin-left: 3px; }
 
     /* SKILLS */
     #skills { background: var(--bg); }
-
-    .skills-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 2px;
-    }
+    .skills-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; }
     .skill-group {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      padding: 32px;
-      transition: border-color 0.3s;
+      background: var(--surface); border: 1px solid var(--border);
+      padding: 32px; transition: border-color 0.3s;
     }
     .skill-group:hover { border-color: var(--accent2); }
-    .skill-group-title {
-      font-size: 10px; letter-spacing: 3px;
-      text-transform: uppercase; color: var(--accent2);
-      margin-bottom: 24px;
-    }
+    .skill-group-title { font-size: 10px; letter-spacing: 3px; text-transform: uppercase; color: var(--accent2); margin-bottom: 24px; }
     .skill-items { display: flex; flex-direction: column; gap: 12px; }
-    .skill-item {
-      display: flex; align-items: center;
-      justify-content: space-between;
-    }
+    .skill-item { display: flex; align-items: center; justify-content: space-between; }
     .skill-name { font-size: 13px; color: var(--text); }
-    .skill-bar {
-      width: 80px; height: 3px;
-      background: var(--border); border-radius: 2px;
-      overflow: hidden;
-    }
+    .skill-bar { width: 80px; height: 3px; background: var(--border); border-radius: 2px; overflow: hidden; }
     .skill-bar-fill {
       height: 100%;
       background: linear-gradient(90deg, var(--accent), var(--accent2));
-      border-radius: 2px;
-      transform: scaleX(0); transform-origin: left;
+      border-radius: 2px; transform: scaleX(0); transform-origin: left;
       transition: transform 1s ease-out;
     }
     .skill-bar-fill.animated { transform: scaleX(1); }
 
     /* CERTIFICATIONS */
-    #certs { background: var(--bg2); }
+    #certs { background: var(--bg); }
     .certs-row { display: flex; gap: 2px; flex-wrap: wrap; }
     .cert-card {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      padding: 28px 32px;
-      flex: 1; min-width: 260px;
+      background: var(--surface); border: 1px solid var(--border);
+      padding: 28px 32px; flex: 1; min-width: 260px;
       display: flex; align-items: center; gap: 20px;
       transition: border-color 0.3s;
     }
@@ -549,81 +385,47 @@
       display: flex; align-items: center; justify-content: center;
       font-size: 20px; flex-shrink: 0;
     }
-    .cert-name {
-      font-family: var(--font-display);
-      font-size: 15px; font-weight: 700;
-      margin-bottom: 4px;
-    }
-    .cert-issuer {
-      font-size: 11px; color: var(--muted); letter-spacing: 1px;
-    }
-    .cert-date {
-      font-size: 10px; color: var(--accent3);
-      margin-top: 4px; letter-spacing: 1px;
-    }
+    .cert-name { font-family: var(--font-display); font-size: 15px; font-weight: 700; margin-bottom: 4px; }
+    .cert-issuer { font-size: 11px; color: var(--muted); letter-spacing: 1px; }
+    .cert-date { font-size: 10px; color: var(--accent3); margin-top: 4px; letter-spacing: 1px; }
 
     /* CONTACT */
     #contact { background: var(--bg); }
-
-    .contact-inner {
-      max-width: 700px;
-      margin: 0 auto;
-      text-align: center;
-      padding: 100px 48px;
-    }
+    .contact-inner { max-width: 700px; margin: 0 auto; text-align: center; padding: 100px 48px; }
     .contact-title {
       font-family: var(--font-display);
       font-size: clamp(36px, 5vw, 60px);
-      font-weight: 800;
-      letter-spacing: -2px;
-      margin-bottom: 20px;
-      line-height: 1.1;
+      font-weight: 800; letter-spacing: -2px;
+      margin-bottom: 20px; line-height: 1.1;
     }
-    .contact-sub {
-      font-size: 14px; color: var(--muted);
-      line-height: 1.8; margin-bottom: 48px;
-    }
+    .contact-sub { font-size: 14px; color: var(--muted); line-height: 1.8; margin-bottom: 48px; }
     .contact-links {
       display: flex; gap: 16px;
-      justify-content: center; flex-wrap: wrap;
-      margin-bottom: 64px;
+      justify-content: center; flex-wrap: wrap; margin-bottom: 64px;
     }
     .contact-link {
-      padding: 12px 24px;
-      border: 1px solid var(--border);
-      color: var(--muted);
-      text-decoration: none;
+      padding: 12px 24px; border: 1px solid var(--border);
+      color: var(--muted); text-decoration: none;
       font-size: 12px; letter-spacing: 1px;
       transition: all 0.2s;
       display: flex; align-items: center; gap: 8px;
     }
-    .contact-link:hover {
-      border-color: var(--accent);
-      color: var(--accent);
-      background: rgba(0,229,255,0.05);
-    }
+    .contact-link:hover { border-color: var(--accent); color: var(--accent); background: rgba(0,229,255,0.05); }
 
-    /* FOOTER */
     footer {
       border-top: 1px solid var(--border);
       padding: 24px 48px;
-      display: flex; justify-content: space-between;
-      align-items: center;
-      font-size: 11px; color: var(--muted);
-      letter-spacing: 1px;
+      display: flex; justify-content: space-between; align-items: center;
+      font-size: 11px; color: var(--muted); letter-spacing: 1px;
       position: relative; z-index: 2;
     }
 
-    /* REVEAL ANIMATION */
     .reveal {
       opacity: 0; transform: translateY(32px);
       transition: opacity 0.7s, transform 0.7s;
     }
-    .reveal.visible {
-      opacity: 1; transform: translateY(0);
-    }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
 
-    /* RESPONSIVE */
     @media (max-width: 768px) {
       nav { padding: 16px 24px; }
       .nav-links { display: none; }
@@ -633,6 +435,7 @@
       .skills-grid { grid-template-columns: 1fr; }
       .projects-grid { grid-template-columns: 1fr; }
       .project-card.featured { grid-template-columns: 1fr; }
+      .blog-grid { grid-template-columns: 1fr; }
       footer { flex-direction: column; gap: 8px; text-align: center; }
       .hero-name { letter-spacing: -2px; }
     }
@@ -668,7 +471,7 @@
       <p class="hero-desc">
         Building intelligent systems that work in the real world —
         from zero-shot CCTV anomaly detection to multilingual Indian
-        voice assistants. MSc Data Science @ Marwadi University.
+        voice assistants. MSc Data Science Graduate · Marwadi University.
       </p>
       <div class="hero-stack">
         <span class="stack-tag">CLIP</span>
@@ -699,7 +502,7 @@
         <div class="about-text">
           <p>
             I'm <strong>Deep Isalaniya</strong>, an AI/ML Engineer based in <strong>Morbi, Gujarat, India</strong>.
-            Currently pursuing my MSc in Data Science at Marwadi University with a CGPA of <strong>9.03</strong>.
+            I've completed my MSc in Data Science from Marwadi University with a CGPA of <strong>9.29</strong>.
           </p>
           <p>
             My work sits at the intersection of <strong>Computer Vision, NLP, and Speech AI</strong>.
@@ -707,9 +510,9 @@
             monitoring dashboards, and alerting pipelines.
           </p>
           <p>
-            At <strong>GGST Innovation</strong>, I'm architecting a multilingual Indian voice assistant
-            that supports Hindi, Telugu, and Kannada using fine-tuned Whisper ASR with QLoRA —
-            making AI accessible to speakers of low-resource Indian languages.
+            At <strong>GGST Innovation</strong>, I architected a multilingual Indian voice assistant
+            supporting Hindi, Telugu, and Kannada — fine-tuning Whisper ASR with QLoRA to
+            make AI accessible to low-resource Indian language speakers.
           </p>
           <p>
             My name "Deep" means <em>depth</em> — and that's exactly how I approach every problem.
@@ -718,15 +521,15 @@
         </div>
         <div class="about-stats">
           <div class="stat-box">
-            <div class="stat-num">9.03</div>
+            <div class="stat-num">9.29</div>
             <div class="stat-label">MSc CGPA</div>
           </div>
           <div class="stat-box">
-            <div class="stat-num">3+</div>
+            <div class="stat-num">3</div>
             <div class="stat-label">Internships</div>
           </div>
           <div class="stat-box">
-            <div class="stat-num">4+</div>
+            <div class="stat-num">5+</div>
             <div class="stat-label">AI Projects</div>
           </div>
           <div class="stat-box">
@@ -750,9 +553,9 @@
             <div class="exp-role">AI / ML Engineer Intern</div>
             <div class="exp-company">GGST Innovation · Rajkot, Gujarat</div>
             <ul class="exp-desc">
-              <li>Architecting an end-to-end multilingual Indian voice assistant (Hindi, Telugu, Kannada) using OpenAI Whisper ASR fine-tuned via QLoRA parameter-efficient training</li>
-              <li>Significantly reduced Word Error Rate on low-resource Indian languages using custom domain-specific audio datasets</li>
-              <li>Currently building the TTS pipeline to complete the full speech-in, speech-out system</li>
+              <li>Architected an end-to-end multilingual Indian voice assistant (Hindi, Telugu, Kannada) using OpenAI Whisper ASR fine-tuned via QLoRA parameter-efficient training on custom domain-specific audio datasets</li>
+              <li>Significantly reduced Word Error Rate on low-resource Indian languages, making speech AI viable for regional language users</li>
+              <li>Built the full TTS pipeline completing the speech-in, speech-out system for Indian regional language users</li>
             </ul>
             <div class="exp-tags">
               <span class="exp-tag">Whisper ASR</span>
@@ -762,7 +565,7 @@
               <span class="exp-tag">TTS</span>
             </div>
           </div>
-          <div class="exp-date">Jan 2025 — Present</div>
+          <div class="exp-date">Dec 2025 — Jun 2026</div>
         </div>
 
         <div class="exp-item reveal">
@@ -780,7 +583,7 @@
               <span class="exp-tag">Excel</span>
             </div>
           </div>
-          <div class="exp-date">Aug 2024 — Jan 2025</div>
+          <div class="exp-date">Aug 2024 — Nov 2025</div>
         </div>
 
         <div class="exp-item reveal">
@@ -851,6 +654,23 @@
 
         <div class="project-card reveal">
           <div class="project-num">02</div>
+          <div class="project-title">ASL Hand Sign Classifier</div>
+          <div class="project-subtitle">24-Class CNN · PyTorch · Live Camera Inference</div>
+          <ul class="project-desc">
+            <li>Custom CNN trained on 24 American Sign Language alphabet classes (A–Z, excluding J and Z) built from scratch in PyTorch</li>
+            <li>Live camera inference pipeline with OpenCV for real-time on-device sign recognition</li>
+            <li>Model persistence with .pth checkpoint and clean modular training loop with full epoch tracking</li>
+          </ul>
+          <div class="project-footer">
+            <div class="project-stack">
+              <span>PyTorch</span><span>CNN</span><span>OpenCV</span><span>Python</span>
+            </div>
+            <a href="https://github.com/Deep-ii/Hand_Sign-Classification" target="_blank" class="project-link">GitHub</a>
+          </div>
+        </div>
+
+        <div class="project-card reveal">
+          <div class="project-num">03</div>
           <div class="project-title">NYC Air Quality Predictor</div>
           <div class="project-subtitle">Classification · Interactive Map · Open Data</div>
           <ul class="project-desc">
@@ -867,7 +687,7 @@
         </div>
 
         <div class="project-card reveal">
-          <div class="project-num">03</div>
+          <div class="project-num">04</div>
           <div class="project-title">Urban City Analysis & Smart City Planning</div>
           <div class="project-subtitle">60K+ Records · Ensemble ML · Public Safety</div>
           <ul class="project-desc">
@@ -883,7 +703,7 @@
         </div>
 
         <div class="project-card reveal">
-          <div class="project-num">04</div>
+          <div class="project-num">05</div>
           <div class="project-title">Human Detection using Faster R-CNN</div>
           <div class="project-subtitle">Object Detection · Auto-annotation Pipeline</div>
           <ul class="project-desc">
@@ -911,7 +731,7 @@
         <div class="skill-group">
           <div class="skill-group-title">AI · ML · DL</div>
           <div class="skill-items">
-            <div class="skill-item"><span class="skill-name">Computer Vision</span><div class="skill-bar"><div class="skill-bar-fill" style="--w:0.9" data-w="0.9"></div></div></div>
+            <div class="skill-item"><span class="skill-name">Computer Vision</span><div class="skill-bar"><div class="skill-bar-fill" data-w="0.9"></div></div></div>
             <div class="skill-item"><span class="skill-name">Deep Learning</span><div class="skill-bar"><div class="skill-bar-fill" data-w="0.85"></div></div></div>
             <div class="skill-item"><span class="skill-name">NLP / Speech AI</span><div class="skill-bar"><div class="skill-bar-fill" data-w="0.8"></div></div></div>
             <div class="skill-item"><span class="skill-name">QLoRA Fine-tuning</span><div class="skill-bar"><div class="skill-bar-fill" data-w="0.75"></div></div></div>
@@ -942,7 +762,7 @@
     </div>
   </section>
 
-  <!-- CERTS -->
+  <!-- CERTIFICATIONS -->
   <section id="certs">
     <div class="section-inner">
       <div class="section-label reveal">Certifications</div>
@@ -969,7 +789,7 @@
           <div>
             <div class="cert-name">MSc Data Science</div>
             <div class="cert-issuer">Marwadi University · NAAC A+</div>
-            <div class="cert-date">2024 – 2026 · CGPA 9.03</div>
+            <div class="cert-date">2024 – 2026 · CGPA 9.29 · Completed</div>
           </div>
         </div>
       </div>
